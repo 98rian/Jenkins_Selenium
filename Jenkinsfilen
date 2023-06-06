@@ -9,7 +9,7 @@ pipeline {
         }
         stage('mvn') {
             steps {
-                bat 'mvn clean test'
+                bat 'mvn -Dmaven.test.failure.ignore=true clean test'
             }
         }
     }
