@@ -38,20 +38,11 @@ public class SeleniumTest {
     }
     @Test
     public void selenium() {
-        driver.get("https://www.webex.com/");
-        driver.manage().window().setSize(new Dimension(1936, 1056));
-        driver.findElement(By.linkText("Devices")).click();
-        {
-            WebElement element = driver.findElement(By.linkText("Solutions"));
-            Actions builder = new Actions(driver);
-            builder.moveToElement(element).perform();
-        }
-        {
-            WebElement element = driver.findElement(By.tagName("body"));
-            Actions builder = new Actions(driver);
-            builder.moveToElement(element, 0, 0).perform();
-        }
-        driver.findElement(By.cssSelector(".col:nth-child(2) > .header_deviceCard__15ArY > .sbody")).click();
+        driver.get("https://www.hongik.ac.kr/index.do");
+        driver.manage().window().setSize(new Dimension(1552, 840));
+        driver.findElement(By.linkText("대학/대학원")).click();
+        driver.findElement(By.linkText("컴퓨터공학과")).click();
+        driver.findElement(By.linkText("대학소개")).click();
         driver.close();
     }
 }
